@@ -1,5 +1,5 @@
 <?php
-class GrapesSoftware_Stores_IndexController extends Mage_Core_Controller_Front_Action{
+class WTC_Stores_IndexController extends Mage_Core_Controller_Front_Action{
     public function IndexAction() {
       
 	  $this->loadLayout();   

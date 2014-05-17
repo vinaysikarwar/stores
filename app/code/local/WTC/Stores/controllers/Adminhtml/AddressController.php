@@ -1,6 +1,6 @@
 <?php
 
-class GrapesSoftware_Stores_Adminhtml_AddressController extends Mage_Adminhtml_Controller_action
+class WTC_Stores_Adminhtml_AddressController extends Mage_Adminhtml_Controller_action
 {
 
 	protected function _initAction() {

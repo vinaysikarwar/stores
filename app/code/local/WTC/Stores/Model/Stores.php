@@ -1,6 +1,6 @@
 <?php
 
-class GrapesSoftware_Stores_Model_Mysql4_Stores_Collection extends Mage_Core_Model_Mysql4_Collection_Abstract
+class WTC_Stores_Model_Stores extends Mage_Core_Model_Abstract
 {
     public function _construct()
     {

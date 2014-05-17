@@ -1,6 +1,6 @@
 <?php
 
-class GrapesSoftware_Stores_Block_Adminhtml_Address_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
+class WTC_Stores_Block_Adminhtml_Address_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
 {
 	protected function _prepareForm()
   {

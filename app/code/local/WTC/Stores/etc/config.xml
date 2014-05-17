@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <config>
   <modules>
-    <GrapesSoftware_Stores>
+    <WTC_Stores>
       <version>0.1.0</version>
-    </GrapesSoftware_Stores>
+    </WTC_Stores>
   </modules>
   <frontend>
     <routers>
       <stores>
         <use>standard</use>
           <args>
-            <module>GrapesSoftware_Stores</module>
+            <module>WTC_Stores</module>
             <frontName>stores</frontName>
           </args>
       </stores>
@@ -26,11 +26,11 @@
   <global>
 	<models>
             <stores>
-                <class>GrapesSoftware_Stores_Model</class>
+                <class>WTC_Stores_Model</class>
                 <resourceModel>stores_mysql4</resourceModel>
             </stores>
             <stores_mysql4>
-                <class>GrapesSoftware_Stores_Model_Mysql4</class>
+                <class>WTC_Stores_Model_Mysql4</class>
                 <entities>
                     <stores>
                         <table>ml_city_stores</table>
@@ -40,18 +40,18 @@
         </models>
     <helpers>
       <stores>
-        <class>GrapesSoftware_Stores_Helper</class>
+        <class>WTC_Stores_Helper</class>
       </stores>
     </helpers>
 	<blocks>
 	  <stores>
-		<class>GrapesSoftware_Stores_Block</class>
+		<class>WTC_Stores_Block</class>
 	  </stores>
 	</blocks>
 	<resources>
 	  <stores_setup>
 		<setup>
-		  <module>GrapesSoftware_Stores</module>
+		  <module>WTC_Stores</module>
 		</setup>
 		<connection>
 		  <use>core_setup</use>
@@ -74,7 +74,7 @@
 	  <stores>
 	    <use>admin</use>
 		<args>
-		  <module>GrapesSoftware_Stores</module>
+		  <module>WTC_Stores</module>
 		  <frontName>stores</frontName>
 		</args>
 	  </stores>

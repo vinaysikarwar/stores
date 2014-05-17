@@ -1,6 +1,6 @@
 <?php
 
-class GrapesSoftware_Stores_Block_Adminhtml_Address_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class WTC_Stores_Block_Adminhtml_Address_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
 
 	protected $_exportPageSize = 500;
