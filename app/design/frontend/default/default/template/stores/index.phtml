@@ -1,0 +1,23 @@
+<div class="stores">
+	<ul>
+	<?php
+		$city = $_GET['city'];
+		$collection = Mage::getModel('stores/stores')->getCollection()->addFieldToFilter('city',$city)->load();
+		if(!count($collection) > 0)
+		{
+			$collection = Mage::getModel('stores/stores')->getCollection()->load();
+		}
+		
+		foreach($collection as $store)
+		{
+				?>
+					<li class="store">
+						<span class="name"><?php echo $store->getStoreName(); ?></span>
+						<span class="address"><?php echo $store->getStoreAddress(); ?></span>
+						<span class="website"><a href="<?php echo $store->getWebsite(); ?>">Website</a></span>
+					</li>
+				<?php
+		}
+	?>
+	</ul>
+</div>

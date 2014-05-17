@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <WTC_AjaxNewsletter>
+      <version>0.1.0</version>
+    </WTC_AjaxNewsletter>
+  </modules>
+  <frontend>
+    <routers>
+      <ajaxnewsletter>
+        <use>standard</use>
+          <args>
+            <module>WTC_AjaxNewsletter</module>
+            <frontName>ajaxnewsletter</frontName>
+          </args>
+      </ajaxnewsletter>
+    </routers>
+		<layout>
+		  <updates>
+			<ajaxnewsletter>
+			  <file>ajaxnewsletter.xml</file>
+			</ajaxnewsletter>
+		  </updates>
+		</layout>
+  </frontend>
+  <global>
+		<rewrite>        
+            <wtc_ajaxnewsletter_newsletter_subscribercontroller>
+                <from><![CDATA[#^/newsletter/subscriber/#]]></from> <!-- Mage_Newsletter_SubscriberController  -->
+                <to>/ajaxnewsletter/newsletter_subscriber/</to> <!-- WTC_AjaxNewsletter_Newsletter_SubscriberController  -->
+            </wtc_ajaxnewsletter_newsletter_subscribercontroller>
+		</rewrite>
+    <helpers>
+      <ajaxnewsletter>
+        <class>WTC_AjaxNewsletter_Helper</class>
+      </ajaxnewsletter>
+    </helpers>
+	<blocks>
+	  <ajaxnewsletter>
+		<class>WTC_AjaxNewsletter_Block</class>
+	  </ajaxnewsletter>
+	</blocks>
+  </global>
+  <admin>
+	<routers>
+	  <ajaxnewsletter>
+	    <use>admin</use>
+		<args>
+		  <module>WTC_AjaxNewsletter</module>
+		  <frontName>ajaxnewsletter</frontName>
+		</args>
+	  </ajaxnewsletter>
+	</routers>
+  </admin>
+</config> 

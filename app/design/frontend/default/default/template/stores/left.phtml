@@ -1,0 +1,56 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Category left navigation
+ *
+ * @see Mage_Catalog_Block_Navigation
+ */
+?>
+<?php $_stores = Mage::getModel('stores/stores')->getCollection(); ?>
+<div class="block block-stores">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Where to Find Us') ?></span></strong>
+    </div>
+    <div class="block-content box">
+        <dl id="narrow-by-list2">
+			<dt></dt>
+            <dd id="list_stores">
+                <ol>
+                <?php foreach ($_stores as $_store): ?>
+                    <li>
+						<?php
+							$city = $_store->getCity();
+						
+						?>
+                        <a href="<?php echo $this->getBaseUrl(); ?>stores?city=<?php echo $city; ?>"><?php echo $this->escapeHtml($_store->getCity()) ?></a>
+                    </li>
+                <?php endforeach ?>
+                </ol>
+            </dd>
+        </dl>
+    </div>
+</div>

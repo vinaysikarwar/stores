@@ -1,0 +1,7 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+	<default>
+		<block type="newsletter/subscribe" name="left.newsletter" template="ajaxnewsletter/subscribe.phtml"/>
+	</default>   
+</layout>   
+	

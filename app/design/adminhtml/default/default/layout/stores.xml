@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <stores_adminhtml_address_index>
+	<reference name="content">
+	  <block type="stores/adminhtml_address" name="stores" />
+	</reference>
+  </stores_adminhtml_address_index>
+</layout>
